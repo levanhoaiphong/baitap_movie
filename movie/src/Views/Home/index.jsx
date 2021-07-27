@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo} from "react";
 import Header from "../../Component/Header";
 import {
   Typography,
@@ -15,7 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchMovie } from "../../redux/action/movie";
 import { NavLink } from "react-router-dom";
 
-export default function Home() {
+function Home() {
   const classes = useStyle();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -73,3 +73,4 @@ export default function Home() {
     </>
   );
 }
+export default memo(Home)
