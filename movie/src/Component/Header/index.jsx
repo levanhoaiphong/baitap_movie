@@ -5,20 +5,9 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Header() {
-  const [auth, setAuth] = useState(true);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-
   const user = useSelector((state)=>{
-    return state.userReducer
+    return state.userReducer.credentials
   })
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   return (
     <AppBar position="static"> 
       <Toolbar>
@@ -31,7 +20,7 @@ export default function Header() {
         >
           Home
         </NavLink>
-        {user ? <span>{user.hoTen}</span>: <><NavLink
+        {user ? <span style={{textAlign:"left"}}>{user.hoTen}</span>: <><NavLink
           activeStyle={{ color: "#f00000" }}
           to="/signin"
           style={{ marginRight: 20, color: "#ffffff" }}
