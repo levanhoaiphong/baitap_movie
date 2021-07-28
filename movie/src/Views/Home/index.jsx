@@ -24,7 +24,6 @@ function Home() {
   const movieList = useSelector((state) => {
     return state.movieReducer.movieList;
   });
-  console.log(movieList);
   return (
     <>
       <Header />

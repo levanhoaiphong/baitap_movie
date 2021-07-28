@@ -16,7 +16,6 @@ export default function Detail(props) {
   const detail = useSelector((state) => {
     return state.movieReducer.movieDetail;
   });
-  console.log(props.match.params);
   return (
 	<>
 	<Header/>

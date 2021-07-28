@@ -32,8 +32,8 @@ function Signin(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setAllTouched()
-    console.log(formik.errors);
-    console.log(formik.values)
+    // console.log(formik.errors);
+    // console.log(formik.values)
 //     Formik luôn luôn true 
 // Object luôn luôn true
 if(!formik.isValid) return;

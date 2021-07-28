@@ -6,19 +6,19 @@ import Home from "./Views/Home";
 import Profile from "./Views/Profile";
 import Signin from "./Views/Signin";
 import Signup from "./Views/Signup";
-import { actionType } from './redux/action/type'
+import { actionType } from './redux/action/type';
 import { createAction } from "./redux/action/createAction";
 import { AudthRoute, PrivateRoute } from "./HOC/Route";
 
 
 function App() {
-  // const dispatch = useDispatch()
-  // useEffect(() => {
-  //    const credentialStr = localStorage.getItem("t")
-  //   if (credentialStr) {
-  //     dispatch(createAction(actionType.SET_USER, JSON.parse(credentialStr)))
-  //   }
-  // }, [])
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("t"))
+    if (user) {
+      dispatch(createAction(actionType.SET_USER, user))
+    }
+  }, [])
 
   return (
     <BrowserRouter>
@@ -33,6 +33,5 @@ function App() {
   );
 
 }
-
 
 export default App

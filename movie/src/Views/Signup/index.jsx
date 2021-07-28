@@ -24,7 +24,7 @@ export default function Signup(props) {
 		  data: formik.values
 	  })
 	  .then((res)=>{
-		  console.log(res)
+		  // console.log(res)
 		  alert("Đăng ký thành công")
 	  })
 	  .catch((err)=>{
@@ -33,7 +33,7 @@ export default function Signup(props) {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formik.values);
+    // console.log(formik.values);
     registerUser()
   };
   return (

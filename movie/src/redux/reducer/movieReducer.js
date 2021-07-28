@@ -8,7 +8,6 @@ const initialState = {
 const movieReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actionType.SET_MOVIE:
-			console.log(action)
 			state.movieList = action.payload;
 			return { ...state }
 		case actionType.SET_MOVIE_DETAIL:
