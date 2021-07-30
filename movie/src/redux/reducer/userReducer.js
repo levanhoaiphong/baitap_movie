@@ -2,7 +2,7 @@ import { actionType } from "../action/type";
 
 
 const initialState = {
-	credentials: null
+	credentials: []
 };
 
 const userReducer = (state = initialState, action) => {

@@ -14,6 +14,7 @@ import useStyle from "./style";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovie } from "../../redux/action/movie";
 import { NavLink } from "react-router-dom";
+import Layout from "../../HOC/Layout";
 
 function Home() {
   const classes = useStyle();
@@ -25,8 +26,7 @@ function Home() {
     return state.movieReducer.movieList;
   });
   return (
-    <>
-      <Header />
+    <Layout>
       <Typography className="mt-5 mb-5" variant="h3" component="h4" align="center">
         Danh Sách Phim
       </Typography>
@@ -69,7 +69,7 @@ function Home() {
           })}
         </Grid>
       </Container>
-    </>
+    </Layout>
   );
 }
 export default memo(Home)

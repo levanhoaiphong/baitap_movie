@@ -1,7 +1,7 @@
-import axios from "axios"
-import { useHistory } from "react-router-dom"
-import { createAction } from "./createAction"
-import { actionType } from "./type"
+import axios from "axios";
+import { useHistory } from "react-router-dom";
+import { createAction } from "./createAction";
+import { actionType } from "./type";
 
 export const signIn = (user, callBack) => {
 	return (dispatch) => {
